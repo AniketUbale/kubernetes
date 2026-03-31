@@ -10,6 +10,9 @@ spec:
       app: ngnix-app
   strategy:
     type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
   template:
     metadata:
       labels:
